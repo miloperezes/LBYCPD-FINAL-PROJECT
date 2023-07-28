@@ -1,18 +1,18 @@
-
 {
-   
-"rewrites": [
+  "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-    ] 
-"builds": [{
-        "src": "LBYCPD-FINAL-PROJECT/core/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-"routes": [
-        {
-            "src": "/(.*)",
-            "dest": "LBYCPD-FINAL-PROJECT/core/wsgi.py"
-        }
-    ]
+  ],
+  "builds": [
+    {
+      "src": "LBYCPD-FINAL-PROJECT/core/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "LBYCPD-FINAL-PROJECT/core/wsgi.py"
+    }
+  ]
 }
